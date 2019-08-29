@@ -67,18 +67,7 @@ body, html {
 }
 @media screen and (max-width: 768px) {
   .navbar {
-    position: absolute;
-    right: 0;
-    height: 92vh;
-    top: 8vh;
-    background-color: #333333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.7s ease-in;
+    display: none;
   }
 }
 
@@ -490,7 +479,17 @@ img {
 }
 
 .nav--active {
-  transform: translateX(0%);
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 92vh;
+  top: 8vh;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
 }
 
 @keyframes navLinkFade {
@@ -501,6 +500,14 @@ img {
   to {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+@keyframes navSlide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 .pressed .line__top {

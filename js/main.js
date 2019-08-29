@@ -63,10 +63,12 @@ thumbnails.forEach( thumb => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar li');
+    nav.classList.remove('nav--active');
 
         // toggle navigation
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav--active');
+        nav.style.animation = `navSlide 1s ease forwards`;
 
             // animate links
         navLinks.forEach((link, index) => {

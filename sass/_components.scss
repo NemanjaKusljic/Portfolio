@@ -248,7 +248,18 @@ img {
 }
 
 .nav--active {
-    transform: translateX(0%);
+    display:block;
+    position: absolute;
+    right:0;
+    height: 92vh;
+    top:8vh;
+    background-color: $grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width:50%;
+    
 }
 
 //menu animation 
@@ -260,6 +271,15 @@ img {
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes navSlide {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
     }
 }
 
