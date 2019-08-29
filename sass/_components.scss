@@ -1,0 +1,277 @@
+.section__heading {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/// PROJECT SLIDER 
+
+.projects {
+    position: relative;
+    img {max-width: 100%;}
+    background-color: $light-grey;
+
+}
+
+.projects__images{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display:flex;
+}
+
+.big__image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-right: -100%;
+    opacity:.5;
+    text-align: center;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    img {
+        object-fit: cover;
+        object-position: center 20%;
+        @media (max-height: 600px) {
+          object-position: center center;
+        }
+    }
+}
+
+.projects__thumbnails{
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+    padding-right: calc(50% + .5rem );
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media screen and (max-width:600px){
+        padding-right: 1rem;
+    }
+    @media screen and (min-width:1886px){
+        min-height: 20rem;
+    }
+}
+
+.thumbnail{
+    position: relative;
+    display:block;
+    margin-right: 1rem;
+    padding:1rem 0;
+    cursor: pointer;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @media screen and (max-width:600px){
+        padding:0;
+    }
+    @media screen and (min-width:1886px){
+        max-height: 15rem;
+        max-width: 15rem;
+    }
+
+
+    img {
+        width:auto;
+        margin-right: 1rem;
+
+    }
+}
+
+.underbar {
+    background-color: $color-secondary;
+    position: absolute;
+    bottom: 0;
+    height: .25rem;
+    width: 100%;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @media screen and (max-width:600px){
+        height: .15rem;
+    }
+}
+
+.projects__nav{
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background: inherit;
+
+    @media screen and (max-width:600px){
+        display: none;
+    }
+
+    button {
+        background:$light-grey;
+        border: none;
+        padding: .5em;
+        width: 2em;
+        color: #FFF;
+        font-family: monospace;
+        transition: inherit;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          background: $color-secondary;
+          outline: none;
+        }
+
+    }
+}
+
+.projects__content{
+    position: absolute;
+    //height: 20%;
+    left:50%;
+    right: 5%;
+    bottom:0;
+    background:$light-grey;
+    padding:1.5rem;
+    display:flex;
+    margin-left: 2rem;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @media screen and (max-width:600px) {
+        left:0;
+        top:100%;
+        height: 30%;
+        margin-top: 1rem;
+        z-index: 6;
+    }
+
+    @media screen and (min-width:1886px){
+        min-height: 15rem;
+        max-width: 35rem;
+    }
+
+    &__articles {
+        position:relative;
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+        color:white;
+    }
+
+    &__article {
+        width:100%;
+        margin-right:-100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: .7rem;
+        line-height: 1.7;
+    }
+}
+
+/// added controls to slider
+
+.big__image {
+    opacity: 0;
+  }
+  
+.big__image[data-active] {
+    opacity: 1;
+}
+
+.thumbnail {
+    > img {
+        filter: grayscale(100%);
+        transition-duration: 300ms;
+      }
+
+    &:active {
+        > img {
+          transform: scale(0.9);
+          transition-duration: 200ms;
+
+          
+        }
+    }
+  }
+  
+  .underbar {
+    opacity: 0;
+  }
+  
+  .thumbnail[data-active], .thumbnail:hover {
+    > img {
+        filter: grayscale(0%);
+      }
+  }
+  .thumbnail[data-active] .underbar {
+    opacity: 1;
+  }
+  
+  .projects__content__article {
+    opacity: 0;
+  }
+  
+  .projects__content__article[data-active] {
+    opacity: 1;
+  }
+
+
+
+
+  ///// MOBILE NAV 
+
+  .burger {
+    display: none;
+    cursor: pointer;
+    margin:10px;
+
+    div {
+        width:25px;
+        height: 3px;
+        background-color: rgb(226, 226, 226);
+        margin:5px;
+        transition: all .3s ease;
+    }
+
+    @media screen and (max-width:768px) {
+        display:block;
+    }
+}
+
+.nav--active {
+    transform: translateX(0%);
+}
+
+//menu animation 
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+.pressed .line__top {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.pressed .line__middle {
+    opacity: 0;
+}
+.pressed .line__bottom {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+

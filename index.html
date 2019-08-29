@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nemanja Kusljic</title>
+</head>
+<body class="container">
+    <header class="header">
+            <nav class="main__nav">
+                    <div class="main__nav__logo">
+                        <img src="img/logo.svg">
+                    </div>
+                    <ul class="navbar">
+                        <li ><a href="#about" class="navbar__item">About me</a></li>
+                        <li ><a href="#projects" class="navbar__item">Projects</a></li>
+                        <li ><a href="#contact" class="navbar__item">Contact</a></li>
+                    </ul>
+
+                    <div class="burger">
+                        <div class="line__top"></div>
+                        <div class="line__middle"></div>
+                        <div class="line__bottom"></div>
+                    </div>
+                </nav>
+            
+                <section class="hero">
+                    <div class="hero__content">
+                        <h1 class="hero__heading hero__heading--large">Nemanja Kusljic</h1>
+                        <h6 class="hero__heading hero__heading--small">Web developer</h6>
+                        <button class="hero__button"><a href="mailto:nemanja.kuslja@gmail.com" target="_blank">Work with me</a></button>
+                    </div>
+                </section>
+    </header>
+   
+
+    <section class="about" id="about">
+        <h2 class="section__heading">About me</h2>
+        <div class="about__content">
+                <div class="skills__container">
+                    <div class="about__skills">HTML</div>
+                    <div class="about__skills">CSS</div>
+                    <div class="about__skills">SASS</div>
+                    <div class="about__skills">JAVASCRIPT</div>
+                    <div class="about__skills">GIT</div>
+                </div>
+                <p class="about__text">Experienced Physics Teacher with a demonstrated history of working in the education management industry.
+                    Skilled in Frontend coding (HTML, CSS, SASS), Frontend development with vanilla JAVASCRIPT.<br>
+                    Strong education professional willing to learn and advance in IT industry.
+                </p>
+        </div>
+        
+        
+    </section>
+
+    <section class="projects" id="projects">
+            <h2 class="section__heading white">Projects</h2>
+        <div class="projects__images">
+            <div class="big__image" data-key="0">
+                <img src="https://picsum.photos/1200/1200/?image=838" alt=""/>
+            </div>
+            <div class="big__image" data-key="1">
+                <img src="https://picsum.photos/1200/1200/?image=823" alt=""/>
+            </div>
+            <div class="big__image" data-key="2">
+                <img src="https://picsum.photos/1200/1200/?image=836" alt=""/>
+            </div>
+            <div class="big__image" data-key="3">
+                <img src="https://picsum.photos/1200/1200/?image=823" alt=""/>
+            </div>
+        </div>
+
+        <div class="projects__thumbnails">
+            <div class="thumbnail" data-key="0">
+                <img src="https://picsum.photos/1200/1200/?image=838" alt=""/>
+                <div class="underbar"></div>
+            </div>
+            <div class="thumbnail" data-key="1">
+                <img src="https://picsum.photos/1200/1200/?image=838" alt=""/>
+                <div class="underbar"></div>
+            </div>
+            <div class="thumbnail" data-key="2">
+                <img src="https://picsum.photos/1200/1200/?image=838" alt=""/>
+                <div class="underbar"></div>
+            </div>
+            <div class="thumbnail" data-key="3">
+                <img src="https://picsum.photos/1200/1200/?image=838" alt=""/>
+                <div class="underbar"></div>
+            </div>
+        </div>
+
+        <div class="projects__content">
+
+            <nav class="projects__nav">
+                <button id="prev"  title="Previous">&lt;</button>
+                <button id="next"  title="Next">&gt;</button>
+            </nav>
+
+
+            <div class="projects__content__articles">
+                <article class="projects__content__article" data-key="0">
+                    <h2 class="section__heading"></h2>
+                    <p class="projects__contents__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta reprehenderit, ut doloribus corrupti</p>
+                </article>
+            
+                <article class="projects__content__article" data-key="1">
+                    <h2 class="section__heading"></h2>
+                    <p class="projects__contents__text">Lorem ipsum dolorsdsdsdsdsdsdsdsd sit amet consectetur adipisicing elit. Molestiae soluta reprehenderit, ut doloribus corrupti</p>
+                </article>
+            
+                <article class="projects__content__article" data-key="2">
+                    <h2 class="section__heading"></h2>
+                    <p class="projects__contents__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta reprehenderit, ut doloribus corrupti</p>
+                </article>
+            
+                <article class="projects__content__article" data-key="3">
+                    <h2 class="section__heading"></h2>
+                    <p class="projects__contents__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta reprehenderit, ut doloribus corrupti</p>
+                </article> 
+            </div>
+           
+
+        </div>
+    </section>
+
+    <footer class="footer" id="contact"> 
+        <div class="social">
+            <a href="mailto:nemanja.kuslja@gmail.com" target="_blank" class="social__mail">nemanja.kuslja@gmail.com</a>
+            <ul class="social__media">
+                <li class="social__links"><a href="https://github.com/NemanjaKusljic" target="_blank" ><i class="fab fa-github-square"></i></a></li>
+                <li class="social__links"><a href="https://www.linkedin.com/in/nemanja-kusljic/"><i class="fab fa-linkedin icons"></i></a></li>
+            </ul>
+        </div>
+        
+        <img src="img/logo.svg" class="footer__logo">
+        <p class="footer__rights">&copy; Nemanja Kusljic, 2019</p>
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>
